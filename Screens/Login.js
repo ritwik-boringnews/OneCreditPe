@@ -12,6 +12,7 @@ import React from 'react';
 import images from '../Constants/images';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Login = () => {
   return (
@@ -39,13 +40,13 @@ const Login = () => {
             style={styles.input}
             // value={number}
             placeholder="Email Id"
-            keyboardType="numeric"
+            keyboardType="text"
           />
           <TextInput
             style={styles.input}
             // value={number}
             placeholder="Password"
-            keyboardType="numeric"
+            keyboardType="text"
           />
         </SafeAreaView>
         <View>
@@ -72,6 +73,7 @@ const Login = () => {
               justifyContent: 'center',
               alignItems: 'center',
               borderRadius: 7,
+              flexDirection:'row'
             }}>
             <Text
               style={{
@@ -79,9 +81,15 @@ const Login = () => {
                 fontSize: 20,
                 fontWeight: 'bold',
                 color: '#FFFFFF',
+                margin:10
               }}>
               Login Now
             </Text>
+            <AntDesign
+            name="arrowright"
+            color="white"
+            size={30}
+          />
           </View>
         </TouchableWithoutFeedback>
       </View>
