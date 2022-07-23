@@ -3,7 +3,7 @@ import {
   Text,
   View,
   Image,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   Dimensions,
   SafeAreaView,
   TextInput,
@@ -14,6 +14,7 @@ import Header from '../../Components/Header';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 import metrics from '../../Constants/metrics';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Loan = () => {
   return (
@@ -42,14 +43,52 @@ const Loan = () => {
         </View>
 
         <View style={styles.docs}>
-          <Text style= {{color: '#20409A', fontFamily: 'Poppins', fontSize: 22, fontWeight: '700'}}>Loan details</Text>
-          <View style={{marginTop: metrics.verticalScale(14)}}>
+          <Text style={{ color: '#20409A', fontFamily: 'Poppins', fontSize: 22, fontWeight: '700' }}>Loan details</Text>
+          <View style={{ width: '100%', justifyContent: 'space-between', marginTop: metrics.verticalScale(14), flexDirection: 'row' }}>
             <View>
               <Text style={styles.cost}>Ammount</Text>
               <Text style={styles.subCost}>10,000-10,00,000</Text>
             </View>
+            <View style={{ alignItems: 'flex-end' }}>
+              <Text style={styles.cost}>Daily Installment(EDI)</Text>
+              <Text style={styles.subCost}>up to ₹ 4,000</Text>
+            </View>
+          </View>
+          <View style={{ width: '100%', marginTop: 14, justifyContent: 'space-between', marginTop: metrics.verticalScale(14), flexDirection: 'row' }}>
+            <View>
+              <Text style={styles.cost}>Interest Rate</Text>
+              <Text style={styles.subCost}>1.75% - 2.50% p/m</Text>
+            </View>
+            <View style={{ alignItems: 'flex-end' }}>
+              <Text style={styles.cost}>Loan Duration</Text>
+              <Text style={styles.subCost}>3 - 12 Months</Text>
+            </View>
           </View>
         </View>
+
+        <TouchableOpacity
+          style={{
+            width: '100%',
+            backgroundColor: '#349EFF',
+            paddingVertical: metrics.verticalScale(5),
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 50,
+            flexDirection: 'row',
+            marginTop: metrics.verticalScale(100)
+
+          }}>
+          <Text
+            style={{
+              fontFamily: 'Poppins-Regular',
+              fontSize: 20,
+              fontWeight: 'bold',
+              color: '#FFFFFF',
+              margin: 10
+            }}>
+            Get Loan
+          </Text>
+        </TouchableOpacity>
       </View>
     </>
   );
@@ -105,11 +144,11 @@ const styles = StyleSheet.create({
     color: '#464555',
     fontFamily: 'Poppins',
     fontSize: 16,
-    fontWeight: '700'
+    fontWeight: '700',
   },
-  subCost:{
+  subCost: {
     color: '#828282',
     fontSize: 16,
-    fontWeight: '700'
+    fontWeight: '500'
   }
 });

@@ -7,7 +7,7 @@ const App = () => {
   return (
     <SafeAreaView>
       <Loan/>
-      {/* // <Login/>  */}
+      {/* <Login/>  */}
     </SafeAreaView>
   );
 };
