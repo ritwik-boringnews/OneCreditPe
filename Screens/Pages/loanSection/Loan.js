@@ -43,7 +43,7 @@ const Loan = () => {
         </View>
 
         <View style={styles.docs}>
-          <Text style={{ color: '#20409A', fontFamily: 'Poppins', fontSize: 22, fontWeight: '700' }}>Loan details</Text>
+          <Text style={{ color: '#20409A', fontFamily: 'Poppins', fontSize: 20, fontWeight: '700' }}>Loan details</Text>
           <View style={{ width: '100%', justifyContent: 'space-between', marginTop: metrics.verticalScale(14), flexDirection: 'row' }}>
             <View>
               <Text style={styles.cost}>Ammount</Text>
@@ -75,7 +75,7 @@ const Loan = () => {
             alignItems: 'center',
             borderRadius: 50,
             flexDirection: 'row',
-            marginTop: metrics.verticalScale(100)
+            marginTop: metrics.verticalScale(80)
 
           }}>
           <Text

@@ -1,17 +1,18 @@
-import {StyleSheet, Text, View,SafeAreaView} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
-import Login from './Screens/Login';
-import Loan from './Screens/loanSection/Loan';
+import {
+  Login, 
+  OtpScreen,
+  Home
+} from './Screens/Pages/index' 
+
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Loan/>
-      {/* <Login/>  */}
-    </SafeAreaView>
+    <>
+      <OtpScreen/>
+    </>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
